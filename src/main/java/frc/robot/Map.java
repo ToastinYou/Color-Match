@@ -1,13 +1,18 @@
 package frc.robot;
 
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 
 public class Map {
-    public static XboxController xboxControl = new XboxController(0);
-    public static Joystick joystickControl = new Joystick(1);
+    public static XboxController XboxControl = new XboxController(0);
+    public static Joystick JoystickControl = new Joystick(1);
 
-	public static int CAN0 = 0;
+	//public static int CAN0 = 0;
+	public static CANSparkMax ColorMotorController = new CANSparkMax(0, MotorType.kBrushless);
+	
 	public static int CAN1 = 1;
 	public static int CAN2 = 2;
 	public static int CAN3 = 3;
